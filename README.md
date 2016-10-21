@@ -1,9 +1,8 @@
-#all the configure file is begin with '.' to hide in the environment
-#you should run "ls -a" to see all the hid files
+#All the configure file is begin with '.' to hide in the environment
+#You should run "ls -a" to see all the hid files
 
-#copy all the file to your home dir "~/"
-#then run the command bellow in your home dir "~/" to make the configure to take effect
+#Copy all the files to your home dir "~/" and unzip the vim.zip
+./configure
 
-unzip vim.zip
-echo "PATH=$PATH:~/sysconfig/" >> .bashrc
+#Then run the command bellow in your home dir "~/" to make the configure to take effect
 source .bashrc

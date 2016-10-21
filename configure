@@ -1,0 +1,6 @@
+#!/bin/bash
+
+unzip vim.zip
+cp -r .sysconfig  .vim .vimrc ~/
+cd ~/
+echo "PATH=$PATH:~/sysconfig/" >> .bashrc
