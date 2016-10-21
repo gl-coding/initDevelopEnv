@@ -4,4 +4,4 @@ cp -r .psnlsysconfig vim.zip .vimrc ~/
 cd ~/
 unzip vim.zip
 rm vim.zip
-echo "PATH=\$PATH:~/psnlsysconfig/" >> .bashrc
+echo "PATH=\$PATH:~/.psnlsysconfig/" >> .bashrc
