@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -r .sysconfig vim.zip .vimrc ~/
+cp -r .psnlsysconfig vim.zip .vimrc ~/
 cd ~/
 unzip vim.zip
 rm vim.zip
