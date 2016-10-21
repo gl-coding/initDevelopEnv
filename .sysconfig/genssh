@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ -f ".ssh/id_rsa.pub" ];then
+    echo "id_rsa.pub exists"
+else
+    echo "you should hit the Enter key three times on A machine"
+    ssh-keygen -t rsa
+fi
+
+echo "copy the id_rsa.pub to the target machine"
+echo "you should type the target machine name:"
+
+read target
+
+#echo $target
+
+#gen change exe filea
+exefile=append_pub
+touch $exefile
+chmod 711 $exefile
+echo "#!/bin/bash" >> $exefile
+echo "cat id_rsa.pub >> .ssh/authorized_keys" >> $exefile
+echo "chmod 600 .ssh/authorized_keys" >> $exefile
+echo "rm id_rsa.pub $exefile" >> $exefile
+
+echo "scp .ssh/id_rsa.pub $exefile $target:"
+
+scp .ssh/id_rsa.pub $exefile $target:
+
+if [ -f "genssh" ];then
+    echo "genssh file exists int current dir"
+    echo "scp genssh $target:"
+    scp genssh $target:
+else
+    echo "genssh file not exists int current dir"
+fi
+
+rm $exefile

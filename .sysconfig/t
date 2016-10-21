@@ -1,0 +1,19 @@
+#!/bin/bash
+
+name=$1
+
+touch $name
+chmod 711 $name
+
+suffix=`echo $name | awk -F '.' '{print $2}'`
+
+if [ "$suffix" = "" ] || [ "$suffix" = "sh" ];then
+    echo "create a shell file"
+    echo "#!/bin/bash" >> $name
+elif [ $suffix = "py" ];then
+    echo "createa python file"
+    echo "#!/usr/bin/python" >> $name
+else
+    echo "others"
+fi
+

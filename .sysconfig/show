@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#zip command
+echo ""
+echo "show--zip example"
+echo "-------------------------"
+echo "zip filename.zip filename"
+echo "zip -r dir.zip dirname"
+echo "zip all.zip *.jpg"
+echo "unzip all.zip"
+echo ""

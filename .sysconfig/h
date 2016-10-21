@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo ""
+echo "system command:"
+echo ""
+echo "c   ----clear the screen"
+echo "g   ----compile and gdb the cpp or c source file"
+echo "h   ----show the person system configuration"
+echo "r   ----compile and run the cpp or c source file"
+echo "t   ----touch a executabe file with the attribute 711"
+echo "u   ----update the glsysconfig dir and leetcode dir to gitpro dir"
+
+echo "vb   ----vi the .bashrc file in the home dir anywhere"
+echo "tg   ----tar xzvf the file end with tar.gz"
+
+echo "show     ----show the linux command you donot remember"
+echo "genssh   ----gen the public ssh key on this machine and copy it to the target machine"
+echo "             you can ssh to the target machine and run the executable file named \"append_pub\""
+echo "             to add the public key to the target machine so that ssh the target without password"
+
+echo ""
+echo "leetcode command(only executable in the leetcode folder):"
+echo ""
+echo "b   ----copy the model.cpp to the test.cp"
+echo "e   ----let the test.cpp execute in the leetcode folder"
+echo "g   ----gdb -tui the test.cpp"
+echo "v   ----vi the test.cpp"

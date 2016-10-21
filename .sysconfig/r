@@ -1,0 +1,30 @@
+#!/bin/bash
+
+wholename=$1
+
+name=`echo $wholename | sed 's/\..*//g'`
+suffix=`echo $wholename | sed 's/.*\.//g'`
+
+echo "compiling the $wholename..."
+if [ $suffix = "c" ];then
+    echo "c file"
+    gcc $wholename -o $name
+elif [ $suffix = "cpp" ];then
+    echo "cpp file"
+    g++ $wholename -o $name -std=c++11
+else
+    echo "no suffix"
+fi
+
+echo "run the $wholename..."
+echo "------------------------------------------"
+
+./$name
+
+echo "------------------------------------------"
+
+echo "remove the executable file..."
+
+rm $name
+
+echo "remove success"
