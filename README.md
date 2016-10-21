@@ -4,5 +4,6 @@
 #copy all the file to your home dir "~/"
 #then run the command bellow in your home dir "~/" to make the configure to take effect
 
+unzip vim.zip
 echo "PATH=$PATH:~/sysconfig/" >> .bashrc
 source .bashrc
